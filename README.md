@@ -16,7 +16,6 @@ Helpers are for use in Hexo templates so to add a playlist on your sidebar or in
 <%- deezerpl(1302841255, 270, 300) %>
 ```
 
-<<<<<<< HEAD
 You could also have the playlist as a config variable and a widget setup like so:
 
 ## Usage Example
@@ -24,6 +23,7 @@ You could also have the playlist as a config variable and a widget setup like so
 On my own blog I have this as a weidgt in the default Light theme of Hexo. The widget has the following code:
 
 ```
+<!-- This is in wigets/_deezerpl.ejs -->
 <% if (config.deezer.playlist){ %>
 <div class="widget deezerpl">
     <h3 class="title">Deezer Playlist</h3>
@@ -39,6 +39,10 @@ Note that the above EJS (template) code has the following:
 3. I not the widget will nt display at all.
 
 You can see this in action on the left sidebar of my site [here](http://www.dougbromley.com).
+
+### Screenshot
+
+![Screenshot of Deezer Playlist for Hexo](https://raw.githubusercontent.com/OdinsHat/hexo-deezer-playlist-helper/9f3b4c2d428c92eb73f24f906498c26968ef6f25/assets/deezerpl-screen.png)
 
 ## Uninstall
 
