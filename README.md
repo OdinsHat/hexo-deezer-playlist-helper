@@ -1,6 +1,6 @@
 # Hexo Dezer Playlist Helper
 
-Hexo helper for use in templates to display a playllist with a given playlist ID, width and height.
+Hexo helper for use in templates to display a Deezer playlist with a given playlist ID, width and height.
 
 ## Installation
 
@@ -10,16 +10,20 @@ $ npm install hexo-deezer-playlist-helper --save
 
 ## Usage
 
-Helpers are for use in Hexo templates so to add a playlist on your sidebar or in posts or somewhere else in your template simply add the following:
+Helpers are for use in Hexo templates so to add a playlist on your sidebar or in posts or somewhere else in your template the very least would be something like this:
 
 ```
 <%- deezerpl(1302841255, 270, 300) %>
 ```
 
+<<<<<<< HEAD
 You could also have the playlist as a config variable and a widget setup like so:
 
+## Usage Example
+
+On my own blog I have this as a weidgt in the default Light theme of Hexo. The widget has the following code:
+
 ```
-<!-- playlist_widget.ejs -->
 <% if (config.deezer.playlist){ %>
 <div class="widget deezerpl">
     <h3 class="title">Deezer Playlist</h3>
@@ -28,11 +32,19 @@ You could also have the playlist as a config variable and a widget setup like so
 <% } %>
 ```
 
+Note that the above EJS (template) code has the following:
+
+1. It checks to see if deezer playlist is defined in the site _config.yml 
+2. If it is then it will display that playlist.
+3. I not the widget will nt display at all.
+
+You can see this in action on the left sidebar of my site [here](http://www.dougbromley.com).
+
 ## Uninstall
 
 1. Remove all usages of the helper from your template.
 
-2. Then run :
+2. Then run:
 
 ```bash
 $ npm uninstall hexo-deezer-playlist-helper
