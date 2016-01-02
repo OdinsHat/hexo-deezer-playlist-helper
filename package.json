@@ -4,7 +4,7 @@
   "description": "Display a Deezer playlist in your Hexo templates",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --reporter nyan"
   },
   "repository": {
     "type": "git",
@@ -18,5 +18,12 @@
   "bugs": {
     "url": "https://github.com/OdinsHat/hexo-deezer-playlist-helper/issues"
   },
-  "homepage": "https://github.com/OdinsHat/hexo-deezer-playlist-helper#readme"
+  "homepage": "https://github.com/OdinsHat/hexo-deezer-playlist-helper#readme",
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "cheerio": "^0.19.0",
+    "fsevents": "^1.0.6",
+    "hexo": "^3.1.1",
+    "mocha": "^2.3.4"
+  }
 }
