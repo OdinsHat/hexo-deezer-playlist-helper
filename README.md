@@ -1,5 +1,5 @@
 # Hexo Dezer Playlist Helper
-[![npm version](https://badge.fury.io/js/hexo-deezer-playlist-helper.svg)](https://badge.fury.io/js/hexo-deezer-playlist-helper)[![Build Status](https://travis-ci.org/OdinsHat/hexo-deezer-playlist-helper.svg?branch=master)](https://travis-ci.org/OdinsHat/hexo-deezer-playlist-helper) [![Code Climate](https://codeclimate.com/github/OdinsHat/hexo-deezer-playlist-helper/badges/gpa.svg)](https://codeclimate.com/github/OdinsHat/hexo-deezer-playlist-helper)
+[![npm version](https://badge.fury.io/js/hexo-deezer-playlist-helper.svg)](https://badge.fury.io/js/hexo-deezer-playlist-helper) [![Build Status](https://travis-ci.org/OdinsHat/hexo-deezer-playlist-helper.svg?branch=master)](https://travis-ci.org/OdinsHat/hexo-deezer-playlist-helper) [![Code Climate](https://codeclimate.com/github/OdinsHat/hexo-deezer-playlist-helper/badges/gpa.svg)](https://codeclimate.com/github/OdinsHat/hexo-deezer-playlist-helper)
 
 Hexo helper for use in templates to display a Deezer playlist with a given playlist ID, width and height.
 
