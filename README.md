@@ -1,4 +1,5 @@
 # Hexo Dezer Playlist Helper
+[![Build Status](https://travis-ci.org/OdinsHat/hexo-deezer-playlist-helper.svg?branch=master)](https://travis-ci.org/OdinsHat/hexo-deezer-playlist-helper) [![Code Climate](https://codeclimate.com/github/OdinsHat/hexo-deezer-playlist-helper/badges/gpa.svg)](https://codeclimate.com/github/OdinsHat/hexo-deezer-playlist-helper)
 
 Hexo helper for use in templates to display a Deezer playlist with a given playlist ID, width and height.
 
@@ -13,7 +14,12 @@ $ npm install hexo-deezer-playlist-helper --save
 Helpers are for use in Hexo templates so to add a playlist on your sidebar or in posts or somewhere else in your template the very least would be something like this:
 
 ```
-<%- deezerpl(1302841255, 270, 300) %>
+<%- deezerpl(1302841255); %>
+
+// Or for custom width and height:
+
+<%- deezerpl(1302841255, {width: 270, height: 300});
+
 ```
 
 You could also have the playlist as a config variable and a widget setup like so:
