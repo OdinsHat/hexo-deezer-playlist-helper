@@ -2,22 +2,32 @@
 
 var cheerio = require('cheerio');
 var should = require('chai').should();
-var Hexo = require('hexo');
+var expect = require('chai').expect;
 
 
 describe('deezerpl', function() {
-    var hexo = new Hexo(process.cwd(), {silent: true});
-    var deezerpl = require('../index.js');
+    var deezerpl = require('../lib/deezerpl');
 
-    it('deezer playlist iframe should be formatted right given a playlist id', function(){
-        var $ = cheerio.load(deezerpl('1279432131'));
+    debugger;
 
-        expect($('iframe').attr('src')).to.contain('http://www.deezer.com/plugins/player');
-        expect($('iframe').attr('src')).to.contain('1279432131');
-        //$('iframe').attr('src').should.eql('http://zespia.tw');
-        //$('iframe').attr('width').should.eql('500');
-        //$('iframe').attr('height').should.eql('300');
-        //$('iframe').attr('frameborder').should.eql('0');
-        //$('iframe').attr('allowfullscreen').should.eql('');
+    it('deezer playlist iframe should contain correct playlist id', function(){
+
+        var frame = deezerpl('1279432131');
+
+        var $ = cheerio.load(frame);
+
+        $('iframe').attr('src').should.be.a('string');
+        expect($('iframe').attr('src').search('www.deezer.com')).to.equal(7);
+        expect($('iframe').attr('src')).to.include('1279432131');
+    });
+    
+    it('deezer playlist iframe have correct width and height as given', function(){
+
+        var frame = deezerpl('1279432131', {width: 300, height: 200});
+
+        var $ = cheerio.load(frame);
+
+        expect($('iframe').attr('src')).to.include('width=300');
+        expect($('iframe').attr('src')).to.include('height=200');
     });
 });
